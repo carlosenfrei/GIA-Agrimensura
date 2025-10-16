@@ -1,0 +1,15 @@
+export const colors={
+    "dptoAgrim":"#F6A605",
+    "institucional":"#0094DA",
+    "texto1":"#171717",
+    "texto2":"#F5F5F5",
+    "texto3":"#415a77",
+    "fondo1":"#caf0f8",
+    "fondo2": "#e0b1cb",
+    "fondo3": "#99e2b4",
+    "fondo4": "#fcf6bd",
+    "fondo6": "#ff6c6c",
+    "fondo5":"#415a77",
+    "sombra1":"#415a77",
+    "sombra2":"#0094DA",
+}
