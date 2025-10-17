@@ -106,90 +106,90 @@ const styles = StyleSheet.create({
     screenContainer: {
         flex: 1,
         padding: 16,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
     },
     headerText: {
         fontSize: 18,
-        fontWeight: 'bold',
-        textAlign: 'center',
+        fontWeight: "bold",
+        textAlign: "center",
         marginBottom: 16,
-        color: '#333',
+        color: "#333",
     },
     noResultsContainer: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
     },
     noResultsText: {
-        textAlign: 'center',
+        textAlign: "center",
         fontSize: 18,
-        color: 'gray',
+        color: "gray",
         marginBottom: 10,
     },
     noResultsDetail: {
-        textAlign: 'center',
+        textAlign: "center",
         fontSize: 14,
-        color: '#666',
+        color: "#666",
         marginBottom: 5,
     },
     cardContainer: {
         marginBottom: 16,
         padding: 16,
-        alignItems: 'stretch', // Cambiado para mejor layout
+        alignItems: "stretch",
     },
     instrumentImage: {
-        width: '100%',
+        width: "100%",
         height: 200,
         marginBottom: 12,
         borderRadius: 8,
 
     },
     noImageContainer: {
-        width: '100%',
+        width: "100%",
         height: 150,
         backgroundColor: colors.fondo1,
         borderRadius: 8,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         marginBottom: 12,
     },
     noImageText: {
-        color: '#999',
+        color: "#999",
         fontSize: 14,
     },
     textContainer: {
-        alignItems: 'center', // Cambiado para mejor alineación
+        alignItems: "center",
     },
     title: {
         fontSize: 16,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginBottom: 8,
         marginTop: 8,
-        color: '#333',
-        textAlign: 'center',
+        color: "#333",
+        textAlign: "center",
     },
     info: {
         fontSize: 14,
         marginBottom: 4,
-        color: '#666',
+        color: "#666",
 
     },
     infoBold: {
-    fontWeight: 'bold', // 👈 pone negrita
-    color: '#333',
+    fontWeight: "bold",
+    color: "#333",
     marginBottom: 4,
     },
     description: {
         fontSize: 14,
         marginTop: 8,
-        color: '#555',
-        fontStyle: 'italic',
+        color: "#555",
+        fontStyle: "italic",
     },
     location: {
         fontSize: 12,
         marginTop: 6,
-        color: '#777',
+        color: "#777",
     },
 
 

@@ -146,48 +146,48 @@ const DetailInstrumentalScreen = ({navigation}) => {
 export default DetailInstrumentalScreen
 
 const styles = StyleSheet.create({
-containerDetail: {
+    containerDetail: {
         flex: 1,
         padding: 10,
-        backgroundColor: '#F5F5F5', // Color de fondo para mejor contraste
+        backgroundColor: "#F5F5F5", // Color de fondo para mejor contraste
     },
     card: {
         // Estilos para la FlatCard que contiene toda la información
         padding: 20,
-        width: '100%',
-        alignItems: 'flex-start', // Alinear texto a la izquierda
+        width: "100%",
+        alignItems: "flex-start", // Alinear texto a la izquierda
     },
     title: {
         fontSize: 20,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginBottom: 10,
-        color: '#333',
-        textAlign: 'center',
-        width: '100%', 
+        color: "#333",
+        textAlign: "center",
+        width: "100%", 
     },
     instrumentImage: {
         width: 100, 
         height: 100, 
-        alignSelf: 'center',
+        alignSelf: "center",
         marginVertical: 15,
         borderRadius: 8,
     },
     infoRow: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '100%',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: "100%",
         marginBottom: 8,
     },
     info: {
         fontSize: 14,
-        color: '#666',
+        color: "#666",
         flexShrink: 1,
         marginVertical: 4,
     },
     infoBold: {
         fontSize: 14,
-        fontWeight: 'bold',
-        color: '#333',
+        fontWeight: "bold",
+        color: "#333",
     },
     descriptionSection: {
         marginTop: 15,
@@ -203,12 +203,12 @@ containerDetail: {
     },
     button: {
         borderRadius: 8,
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: "center",
+        justifyContent: "center",
         elevation: 3,
         width: "30%",
         height:48,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
@@ -217,21 +217,21 @@ containerDetail: {
         opacity: 0.8,
     },
     downloadButton: {
-        backgroundColor: '#1E90FF', 
+        backgroundColor: "#1E90FF", 
     },
     sponsorButton: {
-        backgroundColor: '#FFD700', 
+        backgroundColor: "#FFD700", 
     },
     reserveButton: {
-        backgroundColor: '#3CB371',
+        backgroundColor: "#3CB371",
         
     },
     disabledButton: {
-        backgroundColor: '#707070ff', // Un color gris para indicar que está deshabilitado
+        backgroundColor: "#707070ff", // Un color gris para indicar que está deshabilitado
     },
     botonText:{
         fontSize: 14,
-        fontWeight: 'bold',
-        color: '#333',
+        fontWeight: "bold",
+        color: "#333",
     }
 })

@@ -76,13 +76,13 @@ const styles = StyleSheet.create({
             flex: 1,
     },
     categoriesContainer: {
-        width: '48%',
+        width: "48%",
         marginBottom: 16,
         borderRadius: 10,
-        overflow: 'hidden',
-        backgroundColor: '#eeeaeaff',
+        overflow: "hidden",
+        backgroundColor: "#eeeaeaff",
         //transform: [{ scale: 1 }],
-        transitionDuration: '150ms'
+        transitionDuration: "150ms"
     },
     pressedCard: {
     backgroundColor: colors.institucional, // gris más intenso al presionar
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     },
     row: {
         flex: 1,
-        justifyContent: 'space-between',
+        justifyContent: "space-between",
         marginBottom: 10,
     },
     listContent: {

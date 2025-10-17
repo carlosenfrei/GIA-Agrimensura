@@ -233,49 +233,49 @@ const CargaConfirmacionScreen = ({navigation, route}) => {
 export default CargaConfirmacionScreen
 
 const styles = StyleSheet.create({
-    container: {
+ container: {
         padding: 20,
     },
     centerContainer: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         padding: 20,
     },
     header: {
         fontSize: 22,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginBottom: 20,
-        textAlign: 'center',
+        textAlign: "center",
         color: colors.institucional,
     },
     section: {
         marginBottom: 25,
         borderWidth: 1,
-        borderColor: '#ddd',
+        borderColor: "#ddd",
         borderRadius: 8,
         padding: 15,
-        backgroundColor: '#fff',
+        backgroundColor: "#fff",
     },
     sectionTitle: {
         fontSize: 16,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginBottom: 10,
-        color: '#333',
+        color: "#333",
     },
     infoRow: {
-        flexDirection: 'row',
+        flexDirection: "row",
         paddingVertical: 5,
         borderBottomWidth: 1,
-        borderBottomColor: '#eee',
+        borderBottomColor: "#eee",
     },
     infoLabel: {
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginRight: 10,
-        color: '#555',
+        color: "#555",
     },
     infoValue: {
-        color: '#000',
+        color: "#000",
     },
     inputGroup: {
         marginBottom: 15,
@@ -283,12 +283,12 @@ const styles = StyleSheet.create({
     inputLabel: {
         fontSize: 14,
         marginBottom: 5,
-        fontWeight: 'bold',
-        color: '#333',
+        fontWeight: "bold",
+        color: "#333",
     },
     input: {
         borderWidth: 1,
-        borderColor: '#ccc',
+        borderColor: "#ccc",
         borderRadius: 6,
         padding: 10,
         fontSize: 16,
@@ -296,24 +296,24 @@ const styles = StyleSheet.create({
     itemSummary: {
         fontSize: 14,
         marginBottom: 5,
-        color: '#555',
+        color: "#555",
         marginLeft: 5,
     },
     confirmButton: {
         backgroundColor: colors.institucional,
         padding: 15,
         borderRadius: 8,
-        alignItems: 'center',
+        alignItems: "center",
         marginTop: 10,
     },
     confirmButtonText: {
-        color: '#fff',
+        color: "#fff",
         fontSize: 16,
-        fontWeight: 'bold',
+        fontWeight: "bold",
     },
     infoText: {
         fontSize: 16,
-        textAlign: 'center',
+        textAlign: "center",
         marginBottom: 20,
     },
     returnButton: {
@@ -322,28 +322,28 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     },
     returnButtonText: {
-        color: '#fff',
-        fontWeight: 'bold',
+        color: "#fff",
+        fontWeight: "bold",
     },
     datePickerButton: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
         borderWidth: 1,
-        borderColor: '#ccc',
+        borderColor: "#ccc",
         borderRadius: 6,
         padding: 10,
         marginBottom: 15,
-        backgroundColor: '#f9f9f9',
+        backgroundColor: "#f9f9f9",
     },
     datePickerLabel: {
         fontSize: 14,
-        fontWeight: 'bold',
-        color: '#333',
+        fontWeight: "bold",
+        color: "#333",
     },
     datePickerValue: {
         fontSize: 16,
         color: colors.institucional,
-        fontWeight: 'bold',
+        fontWeight: "bold",
     },
 })

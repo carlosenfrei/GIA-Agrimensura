@@ -116,7 +116,7 @@ const ItemInstrumentalScreen = ({ navigation }) => {
 export default ItemInstrumentalScreen
 
 const styles = StyleSheet.create({
-  container: {
+container: {
     flex: 1,
     padding: 16,
   },
@@ -125,55 +125,55 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   instrumentImage: {
-        width: 100,
-        height: 100,
-        marginBottom: 12,
-        borderRadius:25,
-    },
+    width: 100,
+    height: 100,
+    marginBottom: 12,
+    borderRadius:25,
+  },
   title: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        marginBottom: 8,
-        marginTop: 8,
-        color: '#333',
-        textAlign: 'center',
-    },
-    info: {
-        fontSize: 14,
-        marginBottom: 4,
-        color: '#666',
-    },
-    infoBold: {
-    fontWeight: 'bold',
-    color: '#333',
+    fontSize: 16,
+    fontWeight: "bold",
+    marginBottom: 8,
+    marginTop: 8,
+    color: "#333",
+    textAlign: "center",
+  },
+  info: {
+    fontSize: 14,
     marginBottom: 4,
-    },
-    description: {
-        fontSize: 14,
-        marginTop: 8,
-        color: '#555',
-        fontStyle: 'italic',
-    },
-    buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+    color: "#666",
+  },
+  infoBold: {
+    fontWeight: "bold",
+    color: "#333",
+    marginBottom: 4,  
+  },
+  description: {
+    fontSize: 14,
+    marginTop: 8,
+    color: "#555",
+    fontStyle: "italic",
+  },
+  buttonContainer: {
+    flexDirection: "row",
+    justifyContent: "space-around",
     marginTop: 10,
-    },
-    button: {
+  },
+  button: {
     flex: 1,
     padding: 8,
     borderRadius: 8,
-    alignItems: 'center',
-    marginHorizontal: 5,
+    alignItems: "center",
+    marginHorizontal: 5,  
   },
   infoButton: {
-    backgroundColor: '#4682B4',
+    backgroundColor: "#4682B4",
   },
   reserveButton: {
-    backgroundColor: '#3CB371',
+    backgroundColor: "#3CB371",
   },
   disabledButton: {
-    backgroundColor: '#706e6eff', // Un color gris para indicar que está deshabilitado
+    backgroundColor: "#706e6eff", 
   },
 
 })
