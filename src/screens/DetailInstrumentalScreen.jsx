@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, Pressable, Linking, Alert } from 'react-native'
+import { StyleSheet, Text, View, Image, Pressable, Linking, Alert,ImageBackground } from 'react-native'
 import React from 'react'
 import FlatCard from '../components/FlatCard'
 import imagesInstrumental from '../data/imagesInstrumental.js';
@@ -6,7 +6,7 @@ import { colors } from '../theme/color.js';
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import { addItem, selectCartItems } from '../store/slices/cartSlice.js'
-
+import fondoApp from '../assets/fondo_app.png'
 
 const DetailInstrumentalScreen = ({navigation}) => {
     const instrumento = useSelector((state) => state.instrumentalReducer.instrumentalSelect)
@@ -86,60 +86,62 @@ const DetailInstrumentalScreen = ({navigation}) => {
     };
 
     return (
-        <View style={styles.containerDetail}>
-            <FlatCard style={styles.card}>
-                <Text style={styles.title}>
-                    {instrumento.Categoria} - {instrumento.SubCategoria}
-                </Text>
-                <Image
-                    source={imagesInstrumental[instrumento.imageKey]}
-                    style={styles.instrumentImage}
-                    resizeMode="contain"
-                />
-                <Text style={styles.info}>Marca:
-                    <Text style={styles.infoBold}> {instrumento.Marca || 'N/A'}   </Text>
-                    <Text style={styles.info}>Modelo:
-                        <Text style={styles.infoBold}> {instrumento.Modelo || 'N/A'}  </Text>
+        <ImageBackground source={fondoApp} resizeMode="repeat" style={styles.backgroundImage}>
+            <View style={styles.containerDetail}>
+                <FlatCard style={styles.card}>
+                    <Text style={styles.title}>
+                        {instrumento.Categoria} - {instrumento.SubCategoria}
                     </Text>
-                    <Text style={styles.info}>Estado:
-                        <Text style={styles.infoBold}> {instrumento.Estado || 'N/A'}  </Text>
+                    <Image
+                        source={imagesInstrumental[instrumento.imageKey]}
+                        style={styles.instrumentImage}
+                        resizeMode="contain"
+                    />
+                    <Text style={styles.info}>Marca:
+                        <Text style={styles.infoBold}> {instrumento.Marca || 'N/A'}   </Text>
+                        <Text style={styles.info}>Modelo:
+                            <Text style={styles.infoBold}> {instrumento.Modelo || 'N/A'}  </Text>
+                        </Text>
+                        <Text style={styles.info}>Estado:
+                            <Text style={styles.infoBold}> {instrumento.Estado || 'N/A'}  </Text>
+                        </Text>
+                        
                     </Text>
+                    {/* Descripción */}
+                    <Text style={styles.description}>Descripción: 
+                        <Text style={styles.infoBold}> {instrumento.Descripción} </Text>
+                    </Text>
+                    <View style={styles.buttonContainer}>
                     
-                </Text>
-                {/* Descripción */}
-                <Text style={styles.description}>Descripción: 
-                    <Text style={styles.infoBold}> {instrumento.Descripción} </Text>
-                </Text>
-                <View style={styles.buttonContainer}>
-                
-                {/* botones */}
-                <Pressable 
-                    onPress={handleOpenManual} 
-                    style={({ pressed }) => [styles.button, styles.downloadButton, pressed && styles.buttonPressed]}
-                >
-                    <Text style={styles.botonText}> Manual</Text>
-                </Pressable>
-                
-                <Pressable 
-                    onPress={handleSponsorLink} 
-                    style={({ pressed }) => [styles.button, styles.sponsorButton, pressed && styles.buttonPressed]}
-                >
-                    <Text style={styles.botonText}>Sponsor</Text>
-                </Pressable>
+                    {/* botones */}
+                    <Pressable 
+                        onPress={handleOpenManual} 
+                        style={({ pressed }) => [styles.button, styles.downloadButton, pressed && styles.buttonPressed]}
+                    >
+                        <Text style={styles.botonText}> Manual</Text>
+                    </Pressable>
+                    
+                    <Pressable 
+                        onPress={handleSponsorLink} 
+                        style={({ pressed }) => [styles.button, styles.sponsorButton, pressed && styles.buttonPressed]}
+                    >
+                        <Text style={styles.botonText}>Sponsor</Text>
+                    </Pressable>
 
-                <Pressable 
-                    onPress={handleReservarUnidad} 
-                    style={({ pressed }) => [styles.button, isDisabled ? styles.disabledButton : styles.reserveButton, pressed && !instrumentInCart && styles.buttonPressed ]}
-                    disabled={instrumentInCart} 
-                >
-                    <Text style={styles.botonText}>{instrumentInCart ? 'Reservado' : 'Reservar'}</Text>
-                </Pressable>
+                    <Pressable 
+                        onPress={handleReservarUnidad} 
+                        style={({ pressed }) => [styles.button, isDisabled ? styles.disabledButton : styles.reserveButton, pressed && !instrumentInCart && styles.buttonPressed ]}
+                        disabled={instrumentInCart} 
+                    >
+                        <Text style={styles.botonText}>{instrumentInCart ? 'Reservado' : 'Reservar'}</Text>
+                    </Pressable>
+
+                </View>
+
+                </FlatCard>
 
             </View>
-
-            </FlatCard>
-
-        </View>
+        </ImageBackground>
     )
 }
 
@@ -149,7 +151,11 @@ const styles = StyleSheet.create({
     containerDetail: {
         flex: 1,
         padding: 10,
-        backgroundColor: "#F5F5F5", // Color de fondo para mejor contraste
+        backgroundColor: "transparent",
+    },
+    backgroundImage: {
+        flex: 1,
+        backgroundColor: "#f2f2f2",
     },
     card: {
         // Estilos para la FlatCard que contiene toda la información

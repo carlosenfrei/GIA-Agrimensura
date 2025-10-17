@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList, Image, Pressable, Linking, Alert,  } from 'react-native'; //Animated
+import { StyleSheet, Text, View, FlatList, Image, Pressable, Linking, Alert, ImageBackground } from 'react-native'; //Animated
 //import {useRef} from 'react';
 //import  categories from "../data/categories.json";
 import FlatCard from '../components/FlatCard';
@@ -8,6 +8,8 @@ import {useSelector, useDispatch } from 'react-redux';
 import { selectCategorie } from '../store/slices/instrumentalSlice.js'
 import { colors } from '../theme/color.js'
 import useCategory from '../Hooks/useCategory.js';
+import fondoApp from '../assets/fondo_app.png'
+
 
 const CategoriesScreen = ({navigation}) => {
     const { categories } = useCategory();
@@ -56,16 +58,22 @@ const CategoriesScreen = ({navigation}) => {
         </Pressable>
     )
     return (
-    <View style={styles.screenContainer}>
-        <FlatList 
-            data={categories}
-            renderItem={renderCategoryItem}
-            keyExtractor= {item => item.ID.toString()}
-            numColumns={2}
-            columnWrapperStyle={styles.row}
-            contentContainerStyle={styles.listContent}
-        />
-    </View>
+        <ImageBackground 
+        source={fondoApp} 
+        resizeMode="repeat" 
+        style={styles.backgroundImage} 
+        >
+            <View style={styles.screenContainer}>
+                <FlatList 
+                    data={categories}
+                    renderItem={renderCategoryItem}
+                    keyExtractor= {item => item.ID.toString()}
+                    numColumns={2}
+                    columnWrapperStyle={styles.row}
+                    contentContainerStyle={styles.listContent}
+                />
+            </View>
+        </ImageBackground>
     )
 }
 
@@ -73,7 +81,8 @@ export default CategoriesScreen
 
 const styles = StyleSheet.create({
     screenContainer: {
-            flex: 1,
+        flex: 1,
+        backgroundColor: 'transparent'
     },
     categoriesContainer: {
         width: "48%",
@@ -101,5 +110,8 @@ const styles = StyleSheet.create({
     height: 40,
     marginBottom: 8,
     },
-
+    backgroundImage: {
+        flex: 1, // Asegura que ocupe toda la pantalla
+        backgroundColor: '#f2f2f2',
+    }
 })

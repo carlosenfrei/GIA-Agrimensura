@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList, Image, Pressable } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Image, Pressable,ImageBackground } from 'react-native';
 import {useEffect, useState} from 'react';
 
 import imagesInstrumental from '../data/imagesInstrumental.js';
@@ -9,6 +9,8 @@ import {useSelector, useDispatch } from 'react-redux';
 
 import useInstruments from '../Hooks/useInstruments.js';
 import { colors } from '../theme/color.js';
+import fondoApp from '../assets/fondo_app.png'
+
 
 const InstrumentalScreen = ({ navigation }) => {
     const dispatch = useDispatch();
@@ -71,32 +73,34 @@ const InstrumentalScreen = ({ navigation }) => {
         return <View style={styles.screenContainer}><Text style={styles.noResultsText}>Cargando instrumentos...</Text></View>;
     }
     return (
-        <View style={styles.screenContainer}>
-            <Text style={styles.headerText}>
-                {categoria} - {subcategoria || 'Sin subcategoría'}
-            </Text>
-            <Search selectKeyword={selectKeyword} keyword={keyword}/>
-            {instrumentosFinal.length > 0 ? (
-                <FlatList
-                    data={instrumentosFinal}
-                    renderItem={renderInstrumentItem}
-                    keyExtractor={item => item.ID.toString()}
-                    showsVerticalScrollIndicator={false}
-                />
-            ) : (
-                <View style={styles.noResultsContainer}>
-                    <Text style={styles.noResultsText}>
-                        No se encontraron instrumentos para:
-                    </Text>
-                    <Text style={styles.noResultsDetail}>
-                        Categoría: {categoria}
-                    </Text>
-                    <Text style={styles.noResultsDetail}>
-                        Subcategoría: {subcategoria}
-                    </Text>
-                </View>
-            )}
-        </View>
+        <ImageBackground source={fondoApp} resizeMode="repeat" style={styles.backgroundImage}>
+            <View style={styles.screenContainer}>
+                <Text style={styles.headerText}>
+                    {categoria} - {subcategoria || 'Sin subcategoría'}
+                </Text>
+                <Search selectKeyword={selectKeyword} keyword={keyword}/>
+                {instrumentosFinal.length > 0 ? (
+                    <FlatList
+                        data={instrumentosFinal}
+                        renderItem={renderInstrumentItem}
+                        keyExtractor={item => item.ID.toString()}
+                        showsVerticalScrollIndicator={false}
+                    />
+                ) : (
+                    <View style={styles.noResultsContainer}>
+                        <Text style={styles.noResultsText}>
+                            No se encontraron instrumentos para:
+                        </Text>
+                        <Text style={styles.noResultsDetail}>
+                            Categoría: {categoria}
+                        </Text>
+                        <Text style={styles.noResultsDetail}>
+                            Subcategoría: {subcategoria}
+                        </Text>
+                    </View>
+                )}
+            </View>
+        </ImageBackground>
     );
 }
 
@@ -108,6 +112,11 @@ const styles = StyleSheet.create({
         padding: 16,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "transparent",
+    },
+    backgroundImage: {
+        flex: 1,
+        backgroundColor: "#f2f2f2",
     },
     headerText: {
         fontSize: 18,

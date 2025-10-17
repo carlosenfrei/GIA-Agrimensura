@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View, FlatList, Image, Pressable, useWindowDimensions,Alert } from 'react-native'
+import { StyleSheet, Text, View, FlatList, Image, Pressable, useWindowDimensions,Alert,ImageBackground } from 'react-native'
 import React from 'react'
 import FlatCard from '../components/FlatCard'
 import imagesInstrumental from '../data/imagesInstrumental.js';
 import { useSelector, useDispatch } from 'react-redux'
 import { selectInstrumental } from '../store/slices/instrumentalSlice.js'
 import { addItem, selectCartItems } from '../store/slices/cartSlice.js'
+import fondoApp from '../assets/fondo_app.png'
+
 
 const ItemInstrumentalScreen = ({ navigation }) => {
   const { width } = useWindowDimensions(); //para luego poder una vez determinada el ancho y alto de la pantalla poder mejorar las imagenes ej heigth = {width * .7}
@@ -102,23 +104,30 @@ const ItemInstrumentalScreen = ({ navigation }) => {
     )
   };
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={unidades}
-        keyExtractor={(_, index) => index.toString()} //para evitar problems con el children porque tienen el mismo key que se genera en el filtrado  filterAndGroupInstrumental de INstrumemtalSlice
-        renderItem={renderUnidad}
-        showsVerticalScrollIndicator={false}
-      />
-    </View>
+    <ImageBackground source={fondoApp} resizeMode="repeat" style={styles.backgroundImage}>
+      <View style={styles.container}>
+        <FlatList
+          data={unidades}
+          keyExtractor={(_, index) => index.toString()} //para evitar problems con el children porque tienen el mismo key que se genera en el filtrado  filterAndGroupInstrumental de INstrumemtalSlice
+          renderItem={renderUnidad}
+          showsVerticalScrollIndicator={false}
+        />
+      </View>
+    </ImageBackground>
   )
 }
 
 export default ItemInstrumentalScreen
 
 const styles = StyleSheet.create({
-container: {
+  container: {
     flex: 1,
     padding: 16,
+    backgroundColor: "transparent",
+  },
+  backgroundImage: {
+      flex: 1,
+      backgroundColor: "#f2f2f2",
   },
   card: {
     marginBottom: 16,

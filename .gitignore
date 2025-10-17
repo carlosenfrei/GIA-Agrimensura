@@ -39,3 +39,5 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+# Archivos específicos de la base de datos local
+src/services/node_db.js
