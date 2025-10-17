@@ -27,6 +27,79 @@ Esta alicacion esta construida en **"expo": "54.0.13"** que emplea las siguentes
     "react-native-safe-area-context": "~5.6.0",
     "react-native-screens": "~4.16.0",
     "react-redux": "^9.2.0"
+---
+# Estructura de carpetas y archivos
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📜canasto.jpg
+ ┃ ┣ 📜disto.png
+ ┃ ┣ 📜drone.png
+ ┃ ┣ 📜estacion_total.png
+ ┃ ┣ 📜fondo_app.png
+ ┃ ┣ 📜gis.png
+ ┃ ┣ 📜gnss.png
+ ┃ ┣ 📜ingreso.png
+ ┃ ┣ 📜nivel.png
+ ┃ ┣ 📜salir.png
+ ┃ ┣ 📜sin_fotos.png
+ ┃ ┗ 📜teodolito.png
+ ┣ 📂components
+ ┃ ┣ 📂customText
+ ┃ ┃ ┗ 📜TextRobotoExtraBold.jsx
+ ┃ ┣ 📜Camera.jsx
+ ┃ ┣ 📜Counter.jsx
+ ┃ ┣ 📜FlatCard.jsx
+ ┃ ┣ 📜GenerarPDF.jsx
+ ┃ ┣ 📜Header.jsx
+ ┃ ┗ 📜Search.jsx
+ ┣ 📂context
+ ┃ ┗ 📜CartContext.jsx
+ ┣ 📂data
+ ┃ ┣ 📜imagesCategories.js
+ ┃ ┗ 📜imagesInstrumental.js
+ ┣ 📂Hooks
+ ┃ ┣ 📜useAuth.js
+ ┃ ┣ 📜useAuthlis.js
+ ┃ ┣ 📜useCategory.js
+ ┃ ┣ 📜useFileDownload.js
+ ┃ ┣ 📜useImageUpload.js
+ ┃ ┣ 📜useInstrument.js
+ ┃ ┣ 📜useInstruments.js
+ ┃ ┣ 📜useReservas.js
+ ┃ ┣ 📜useSubCategories.js
+ ┃ ┗ 📜useUserData.js
+ ┣ 📂navigation
+ ┃ ┣ 📜AuthStackNavigator.jsx
+ ┃ ┣ 📜BottonTabNavigation.jsx
+ ┃ ┣ 📜CartStackNavigation.jsx
+ ┃ ┣ 📜MainNavigator.jsx
+ ┃ ┣ 📜ProfileStackNavigator.jsx
+ ┃ ┗ 📜VirtualInstrumentRoom.jsx
+ ┣ 📂screens
+ ┃ ┣ 📜CargaConfirmacionScreen.jsx
+ ┃ ┣ 📜CartScreen.jsx
+ ┃ ┣ 📜CategoriesScreen.jsx
+ ┃ ┣ 📜DetailInstrumentalScreen.jsx
+ ┃ ┣ 📜index.js
+ ┃ ┣ 📜InstrumentalScreen.jsx
+ ┃ ┣ 📜ItemInstrumentalScreen.jsx
+ ┃ ┣ 📜ProfileScreen.jsx
+ ┃ ┣ 📜SessionScreen.jsx
+ ┃ ┗ 📜SubProductsScreen.jsx
+ ┣ 📂services
+ ┃ ┣ 📜db.js
+ ┃ ┗ 📜node_db.js NO SE SUBE A GIT HUB POR SEGURIDAD ES PARA PODER LOS ARCHIVO JS DENTRO DE LA CARPETA DE UTILIADES
+ ┣ 📂store
+ ┃ ┣ 📂slices
+ ┃ ┃ ┣ 📜cartSlice.js
+ ┃ ┃ ┣ 📜instrumentalSlice.js
+ ┃ ┃ ┗ 📜userSlice.js
+ ┃ ┗ 📜index.js
+ ┣ 📂theme
+ ┃ ┗ 📜color.js
+ ┗ 📂utilidades
+ ┃ ┣ 📜seedCategories.js
+ ┃ ┗ 📜seedInstrumental.js
 
 ---
 Antes de instalar y ejecutar la app, necesitás tener instalados:
